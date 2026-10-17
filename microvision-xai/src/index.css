@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background-primary: #F8FAFC;
+    --background-secondary: #F7F9FB;
+    --background-tertiary: #F5F8FA;
+    --accent-primary: #5B8DB8;
+    --accent-secondary: #6A9BC2;
+    --teal-primary: #6FA7A3;
+    --text-primary: #263746;
+    --text-secondary: #64748B;
+    --text-muted: #94A3B8;
+    --border-light: #E2E8F0;
+    --status-success: #5E9C83;
+    --status-warning: #C59A55;
+    --status-danger: #C56B6B;
+    --status-info: #6A9BC2;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background-primary text-text-primary antialiased;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  * {
+    @apply selection:bg-accent-primary/20;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-accent-primary rounded-md transition-colors hover:bg-accent-secondary focus:outline-none focus:ring-2 focus:ring-accent-primary focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-text-primary bg-white border border-border-light rounded-md transition-colors hover:bg-background-secondary focus:outline-none focus:ring-2 focus:ring-accent-primary focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-danger {
+    @apply inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-status-danger rounded-md transition-colors hover:bg-status-danger/90 focus:outline-none focus:ring-2 focus-ring-status-danger focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .card {
+    @apply bg-white border border-border-light rounded-lg p-6 shadow-sm;
+  }
+
+  .card-hover {
+    @apply card transition-all hover:shadow-md hover:border-accent-primary/30;
+  }
+
+  .input-field {
+    @apply block w-full px-3 py-2 text-sm text-text-primary bg-white border border-border-light rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-accent-primary focus:border-accent-primary;
+  }
+
+  .label {
+    @apply block text-sm font-medium text-text-secondary mb-1;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .badge-success {
+    @apply badge bg-status-success/10 text-status-success;
+  }
+
+  .badge-warning {
+    @apply badge bg-status-warning/10 text-status-warning;
+  }
+
+  .badge-danger {
+    @apply badge bg-status-danger/10 text-status-danger;
+  }
+
+  .badge-info {
+    @apply badge bg-status-info/10 text-status-info;
+  }
+
+  .badge-neutral {
+    @apply badge bg-text-muted/10 text-text-muted;
+  }
+
+  .table-container {
+    @apply overflow-x-auto;
+  }
+
+  .table {
+    @apply w-full text-left border-collapse;
+  }
+
+  .table th {
+    @apply px-4 py-3 text-xs font-medium text-text-muted uppercase tracking-wider border-b border-border-light bg-background-secondary;
+  }
+
+  .table td {
+    @apply px-4 py-4 text-sm text-text-primary border-b border-border-light;
+  }
+
+  .table tr:hover {
+    @apply bg-background-secondary/50;
+  }
+
+  .sidebar-item {
+    @apply flex items-center px-4 py-3 text-sm font-medium text-text-secondary rounded-md transition-colors hover:bg-background-secondary hover:text-accent-primary;
+  }
+
+  .sidebar-item-active {
+    @apply sidebar-item bg-accent-primary/10 text-accent-primary;
+  }
+
+  .section-header {
+    @apply mb-6;
+  }
+
+  .section-title {
+    @apply text-lg font-semibold text-text-primary mb-1;
+  }
+
+  .section-subtitle {
+    @apply text-sm text-text-secondary;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .animation-delay-100 {
+    animation-delay: 100ms;
+  }
+  
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+  
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+  
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+}
