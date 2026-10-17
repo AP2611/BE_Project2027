@@ -81,7 +81,7 @@ export const Preprocessing: React.FC = () => {
 
       <div className="flex justify-end">
         <CardFooter>
-          <Button variant="primary" onClick={() => {}}>
+          <Button variant="primary" onClick={() => window.location.href = '/detection'}>
             Run Detection <ArrowRight size={16} />
           </Button>
         </CardFooter>

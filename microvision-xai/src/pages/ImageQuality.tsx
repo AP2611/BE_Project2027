@@ -77,7 +77,7 @@ export const ImageQuality: React.FC = () => {
                 Image quality is suitable for automated detection.
               </p>
               <CardFooter>
-                <Button variant="primary" onClick={() => {}}>
+                <Button variant="primary" onClick={() => window.location.href = '/preprocessing'}>
                   Proceed to Preprocessing <ArrowRight size={16} />
                 </Button>
               </CardFooter>

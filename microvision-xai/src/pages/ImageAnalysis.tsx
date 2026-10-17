@@ -109,7 +109,7 @@ export const ImageAnalysis: React.FC = () => {
                   </div>
                 </div>
                 <CardFooter>
-                  <Button variant="primary" onClick={() => {}}>
+                  <Button variant="primary" onClick={() => window.location.href = '/image-quality'}>
                     Continue to Quality Check <ArrowRight size={16} />
                   </Button>
                 </CardFooter>
